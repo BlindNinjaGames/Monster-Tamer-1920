@@ -89,5 +89,10 @@ public enum PlayerStat
     playerMaxHP,
     playerAttack,
     playerDefense,
-    playerSpeed
+    playerSpeed,
+    playerCritical,
+
+    // These 2 are not actual stats, they're used to boost the moveAccuracy
+    playerAccuracy,
+    playerEvasion
 }

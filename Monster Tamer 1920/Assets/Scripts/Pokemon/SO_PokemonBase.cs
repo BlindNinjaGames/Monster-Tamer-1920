@@ -16,6 +16,7 @@ public class SO_PokemonBase : ScriptableObject
     [SerializeField] public SO_TypeBase pokemonType;
 
     [SerializeField] public int monsterRank;
+    [SerializeField] public bool hasNose;
 
 
     // Base Stats
@@ -124,8 +125,8 @@ public enum Stat
     pokemonCritical,
 
     // These 2 are not actual stats, they're used to boost the moveAccuracy
-    Accuracy,
-    Evasion
+    pokemonAccuracy,
+    pokemonEvasion
 
 }
 
