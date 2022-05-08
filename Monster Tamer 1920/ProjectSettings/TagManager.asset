@@ -11,13 +11,13 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Collisions
+  - TallGrass
+  - Interactable
+  - Player
+  - FOVLayer
+  - Portal
+  - Triggers
   - 
   - 
   - 
@@ -40,4 +40,43 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3115598257
+    locked: 0
+  - name: Foreground
+    uniqueID: 1820172841
+    locked: 0
+  - name: Decorations1
+    uniqueID: 3554198975
+    locked: 0
+  - name: Decorations2
+    uniqueID: 39203409
+    locked: 0
+  - name: Decorations3
+    uniqueID: 1850140643
+    locked: 0
+  - name: CaveBack
+    uniqueID: 2629867099
+    locked: 0
+  - name: CaveFore
+    uniqueID: 716721889
+    locked: 0
+  - name: CaveDecor1
+    uniqueID: 2048850417
+    locked: 0
+  - name: CaveDecor2
+    uniqueID: 3531749495
+    locked: 0
+  - name: CaveDecor3
+    uniqueID: 1111854261
+    locked: 0
+  - name: Collisions
+    uniqueID: 1776153355
+    locked: 0
+  - name: Player
+    uniqueID: 2024499127
+    locked: 0
+  - name: Battle
+    uniqueID: 1383924797
     locked: 0
