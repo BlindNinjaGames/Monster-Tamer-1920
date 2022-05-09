@@ -10,40 +10,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f99fc62e251b30a4aaf2ccab08c3c5cd, type: 3}
-  m_Name: Fire1
+  m_Name: Water1
   m_EditorClassIdentifier: 
-  pokemonName: Fire Monster 1
+  pokemonName: Water Monster 1
   pokemonDescription: 
-  pokemonFrontSprite: {fileID: 21300000, guid: cd259d9d4f8ba2749a16d1cc64d46bec, type: 3}
-  pokemonBackSprite: {fileID: 21300000, guid: ed8e1d9976a1fd94d961840d8f6e7764, type: 3}
-  pokemonType: {fileID: 11400000, guid: 5b269dedbe44cc24f924ebb26deec101, type: 2}
+  pokemonFrontSprite: {fileID: 21300000, guid: 818cf159951cf9a4e8e810b2bbab4096, type: 3}
+  pokemonBackSprite: {fileID: 21300000, guid: 18fc6e8e3f72b154fba88f358748be28, type: 3}
+  pokemonType: {fileID: 11400000, guid: e8277900f0579a34f92646c7d81f11c7, type: 2}
   monsterRank: 0
   hasNose: 0
-  pokemonSpeed: 12
-  pokemonCritical: 7
+  pokemonSpeed: 11
+  pokemonCritical: 5
   learnableMoves:
   - moveLevel: 1
-    moveBase: {fileID: 11400000, guid: 171bc674f457b514f8c5759b4c18a7e5, type: 2}
+    moveBase: {fileID: 11400000, guid: 4c4a37c60fb66de4d8e79a1b4581fa4b, type: 2}
   pokemonStats:
   - pokemonLevel: 1
     pokemonMaxHP: 65
-    pokemonAttack: 23
-    pokemonDefense: 17
+    pokemonAttack: 21
+    pokemonDefense: 19
   - pokemonLevel: 2
     pokemonMaxHP: 69
-    pokemonAttack: 27
-    pokemonDefense: 21
+    pokemonAttack: 25
+    pokemonDefense: 19
   - pokemonLevel: 3
     pokemonMaxHP: 73
-    pokemonAttack: 31
-    pokemonDefense: 25
+    pokemonAttack: 29
+    pokemonDefense: 23
   - pokemonLevel: 4
     pokemonMaxHP: 77
-    pokemonAttack: 35
-    pokemonDefense: 29
+    pokemonAttack: 33
+    pokemonDefense: 27
   - pokemonLevel: 5
     pokemonMaxHP: 81
-    pokemonAttack: 39
-    pokemonDefense: 33
+    pokemonAttack: 37
+    pokemonDefense: 31
   expYield: 200
   growthRate: 3

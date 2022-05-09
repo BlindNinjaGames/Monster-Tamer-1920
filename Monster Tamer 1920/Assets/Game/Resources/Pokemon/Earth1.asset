@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99fc62e251b30a4aaf2ccab08c3c5cd, type: 3}
+  m_Name: Earth1
+  m_EditorClassIdentifier: 
+  pokemonName: Earth Monster 1
+  pokemonDescription: 
+  pokemonFrontSprite: {fileID: 21300000, guid: 0f37bf3cf5680a64d863b5f155b2a597, type: 3}
+  pokemonBackSprite: {fileID: 21300000, guid: aacaae602a38f884ab9e02e43de3736d, type: 3}
+  pokemonType: {fileID: 11400000, guid: 4bae93ed230fb0f478974b138dfa1e01, type: 2}
+  monsterRank: 0
+  hasNose: 0
+  pokemonSpeed: 9
+  pokemonCritical: 3
+  learnableMoves:
+  - moveLevel: 1
+    moveBase: {fileID: 11400000, guid: ef79940dc846fc244929ad18bd0c89d9, type: 2}
+  pokemonStats:
+  - pokemonLevel: 1
+    pokemonMaxHP: 72
+    pokemonAttack: 17
+    pokemonDefense: 19
+  - pokemonLevel: 2
+    pokemonMaxHP: 76
+    pokemonAttack: 21
+    pokemonDefense: 23
+  - pokemonLevel: 3
+    pokemonMaxHP: 81
+    pokemonAttack: 25
+    pokemonDefense: 27
+  - pokemonLevel: 4
+    pokemonMaxHP: 85
+    pokemonAttack: 29
+    pokemonDefense: 31
+  - pokemonLevel: 5
+    pokemonMaxHP: 89
+    pokemonAttack: 33
+    pokemonDefense: 35
+  expYield: 200
+  growthRate: 3
