@@ -5,26 +5,26 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Pokemon", menuName = "Pokemon/Create new pokemon")]
 public class SO_PokemonBase : ScriptableObject
 {
-    [SerializeField] public string pokemonName;
+    [SerializeField] string pokemonName;
 
     [TextArea]
-    [SerializeField] public string pokemonDescription;
+    [SerializeField] string pokemonDescription;
 
-    [SerializeField] public Sprite pokemonFrontSprite;
-    [SerializeField] public Sprite pokemonBackSprite;
+    [SerializeField]  Sprite pokemonFrontSprite;
+    [SerializeField]  Sprite pokemonBackSprite;
 
-    [SerializeField] public SO_TypeBase pokemonType;
+    [SerializeField]  SO_TypeBase pokemonType;
 
-    [SerializeField] public int monsterRank;
-    [SerializeField] public bool hasNose;
+    [SerializeField]  int monsterRank;
+    [SerializeField]  bool hasNose;
 
 
     // Base Stats
-    [SerializeField] public int pokemonSpeed;
-    [SerializeField] public int pokemonCritical;
+    [SerializeField]  int pokemonSpeed;
+    [SerializeField]  int pokemonCritical;
 
-    [SerializeField] public List<LearnableMoves> learnableMoves;
-    [SerializeField] public List<PokemonStats> pokemonStats;
+    [SerializeField]  List<LearnableMoves> learnableMoves;
+    [SerializeField]  List<PokemonStats> pokemonStats;
 
     [SerializeField] int expYield;
     [SerializeField] GrowthRate growthRate;
@@ -102,23 +102,32 @@ public class SO_PokemonBase : ScriptableObject
 [System.Serializable]
 public class LearnableMoves
 {
-    [SerializeField] public int moveLevel;
-    [SerializeField] public SO_MoveBase moveBase;
+    [SerializeField]  int level;
+    [SerializeField]  SO_MoveBase moveBase;
+
+    public SO_MoveBase MoveBase
+    {
+        get { return moveBase; }
+    }
+
+    public int Level
+    {
+        get { return level; }
+    }
 }
 
 [System.Serializable]
 public class PokemonStats
 {
-    [SerializeField] public int pokemonLevel;
-    [SerializeField] public int pokemonMaxHP;
-    [SerializeField] public int pokemonAttack;
-    [SerializeField] public int pokemonDefense;
+    [SerializeField]  int pokemonLevel;
+    [SerializeField]  int pokemonMaxHP;
+    [SerializeField]  int pokemonAttack;
+    [SerializeField]  int pokemonDefense;
 }
 
 
 public enum Stat
 {
-    pokemonMaxHP,
     pokemonAttack,
     pokemonDefense,
     pokemonSpeed,
