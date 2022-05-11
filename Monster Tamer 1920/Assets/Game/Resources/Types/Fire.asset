@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   typeName: Fire
+  typeSprite: {fileID: 6459338707858702098, guid: c91a09d4477181e4eb5cbc3ba663048e, type: 3}
   superEffective:
   - {fileID: 11400000, guid: 301afa9d84d971d4a8b85ecd5fbdeddf, type: 2}
   notVeryEffective:

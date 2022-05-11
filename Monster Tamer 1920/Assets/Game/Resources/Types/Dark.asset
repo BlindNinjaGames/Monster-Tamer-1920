@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Dark
   m_EditorClassIdentifier: 
   typeName: Dark
+  typeSprite: {fileID: 3052530060310265633, guid: c91a09d4477181e4eb5cbc3ba663048e, type: 3}
   superEffective:
   - {fileID: 11400000, guid: 788b8d9816c1b2e4db3324f2a3c20733, type: 2}
   - {fileID: 11400000, guid: 92b26332c3ec6cd4a86c317b4f88ba54, type: 2}

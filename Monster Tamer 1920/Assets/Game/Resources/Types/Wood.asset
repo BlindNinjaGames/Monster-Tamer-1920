@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Wood
   m_EditorClassIdentifier: 
   typeName: Wood
+  typeSprite: {fileID: 1764603840618062037, guid: c91a09d4477181e4eb5cbc3ba663048e, type: 3}
   superEffective:
   - {fileID: 11400000, guid: 4bae93ed230fb0f478974b138dfa1e01, type: 2}
   notVeryEffective:

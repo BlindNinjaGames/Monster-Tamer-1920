@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Light
   m_EditorClassIdentifier: 
   typeName: Light
+  typeSprite: {fileID: 6531347353198917125, guid: c91a09d4477181e4eb5cbc3ba663048e, type: 3}
   superEffective:
   - {fileID: 11400000, guid: ef17c529645b38740866d446acf20ae6, type: 2}
   - {fileID: 11400000, guid: 92b26332c3ec6cd4a86c317b4f88ba54, type: 2}

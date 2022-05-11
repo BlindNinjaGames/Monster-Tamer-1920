@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Earth
   m_EditorClassIdentifier: 
   typeName: Earth
+  typeSprite: {fileID: -5348134891474316287, guid: c91a09d4477181e4eb5cbc3ba663048e, type: 3}
   superEffective:
   - {fileID: 11400000, guid: e8277900f0579a34f92646c7d81f11c7, type: 2}
   notVeryEffective:

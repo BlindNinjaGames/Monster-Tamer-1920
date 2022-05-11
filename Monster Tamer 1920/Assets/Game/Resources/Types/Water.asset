@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   typeName: Water
+  typeSprite: {fileID: 3796132524341861208, guid: c91a09d4477181e4eb5cbc3ba663048e, type: 3}
   superEffective:
   - {fileID: 11400000, guid: 5b269dedbe44cc24f924ebb26deec101, type: 2}
   notVeryEffective:

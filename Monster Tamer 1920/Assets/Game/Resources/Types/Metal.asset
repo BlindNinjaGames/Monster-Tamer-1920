@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Metal
   m_EditorClassIdentifier: 
   typeName: Metal
+  typeSprite: {fileID: -8636385570481010447, guid: c91a09d4477181e4eb5cbc3ba663048e, type: 3}
   superEffective:
   - {fileID: 11400000, guid: 79587644659264e49b280b9fd3a23525, type: 2}
   notVeryEffective:

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Neutral
   m_EditorClassIdentifier: 
   typeName: Neutral
+  typeSprite: {fileID: 255977414755586389, guid: c91a09d4477181e4eb5cbc3ba663048e, type: 3}
   superEffective: []
   notVeryEffective: []
   buffPokemon: []

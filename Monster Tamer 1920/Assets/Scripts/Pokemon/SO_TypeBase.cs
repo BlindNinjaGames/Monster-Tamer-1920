@@ -6,6 +6,7 @@ using UnityEngine;
 public class SO_TypeBase : ScriptableObject
 {
     [SerializeField] string typeName;
+    [SerializeField] Sprite typeSprite;
 
     [Tooltip("The elemental type that will be super effective against the opponent.")]
     [SerializeField] List<SO_TypeBase> superEffective = new List<SO_TypeBase>();

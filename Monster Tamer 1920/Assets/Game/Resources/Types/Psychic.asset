@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Psychic
   m_EditorClassIdentifier: 
   typeName: Psychic
+  typeSprite: {fileID: -3829016030565205268, guid: c91a09d4477181e4eb5cbc3ba663048e, type: 3}
   superEffective:
   - {fileID: 11400000, guid: ef17c529645b38740866d446acf20ae6, type: 2}
   - {fileID: 11400000, guid: 788b8d9816c1b2e4db3324f2a3c20733, type: 2}
