@@ -24,7 +24,10 @@ public class WillSystem : MonoBehaviour
     [SerializeField] public int eliteWillPoints = 25;
 
     [Tooltip("The number of Will lost from being defeated")]
-    [SerializeField] public int playerDefeatedWillPoints = -10;
+    [SerializeField] public int playerDefeatedWillPoints = 10;
+
+    [Tooltip("The number of Will lost from failing to catch a monster")]
+    [SerializeField] public int playerFailCatchWillPoints = 5;
 
     private void Awake()
     {

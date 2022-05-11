@@ -22,7 +22,7 @@ MonoBehaviour:
   pokemonSpeed: 11
   pokemonCritical: 5
   learnableMoves:
-  - moveLevel: 1
+  - level: 1
     moveBase: {fileID: 11400000, guid: 4c4a37c60fb66de4d8e79a1b4581fa4b, type: 2}
   pokemonStats:
   - pokemonLevel: 1
