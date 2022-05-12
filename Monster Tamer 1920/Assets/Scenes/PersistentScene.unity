@@ -2237,6 +2237,7 @@ GameObject:
   - component: {fileID: 397616414}
   - component: {fileID: 397616416}
   - component: {fileID: 397616415}
+  - component: {fileID: 397616417}
   m_Layer: 0
   m_Name: CaptureScreen
   m_TagString: Untagged
@@ -2308,6 +2309,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397616413}
   m_CullTransparentMesh: 1
+--- !u!114 &397616417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397616413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b98d468598342409d180218901fce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseCatchPercentage: 0
+  mashDelay: 0.5
+  slider: {fileID: 1426078085}
+  timerValue: 5
 --- !u!1 &407645218
 GameObject:
   m_ObjectHideFlags: 0
