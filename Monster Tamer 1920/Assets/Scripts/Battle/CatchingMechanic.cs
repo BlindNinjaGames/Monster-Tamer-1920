@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CatchingMechanic : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class CatchingMechanic : MonoBehaviour
   //  MonsterScript monsterScript;   //Need to use the correct script to identify monsters
     int buttonMashTotal;
     int randomCatchNumber;
-    [SerializeField] float mashDelay = 0.5f;
+    [SerializeField] float mashDelay = 0.2f;
     bool pressed = false;
     bool started = false;
     float mash;
@@ -22,7 +23,12 @@ public class CatchingMechanic : MonoBehaviour
     [SerializeField] public bool buttonMashAccessibility = false;
     bool isLooping = false;
     bool pressAgain = true;
-    [SerializeField] float timeBetweenPresses = 0.13f;  //This gives the same pressing speed as me. lol
+    [SerializeField] float timeBetweenPresses = 0.13f;
+
+    [SerializeField] TextMeshProUGUI caughtMonsterText;
+    [SerializeField] TextMeshProUGUI failedCatchText;
+    [SerializeField] TextMeshProUGUI countdownDisplay;
+    int countdownTime = 5;
 
     /*
     private void Awake()
@@ -38,10 +44,10 @@ public class CatchingMechanic : MonoBehaviour
         timer = timerValue;
         baseCatchPercentage = 1 + willSystem.playerRank - monsterScript.monsterRank;   //Need to use the correct script to identify monsters
 
-        if (buttonMashAccessibility)
-        {
-            isLooping = true;
-        }
+        caughtMonsterText.gameObject.SetActive(false);
+        failedCatchText.gameObject.SetActive(false);
+        countdownDisplay.gameObject.SetActive(false);
+
     }
 
 
@@ -67,6 +73,8 @@ public class CatchingMechanic : MonoBehaviour
                 started = true;
                 mash -= Time.deltaTime;
                 timer -= Time.deltaTime;
+                countdownDisplay.gameObject.SetActive(true);
+                StartCoroutine(CountdownTimer());
             }
 
         }
@@ -78,13 +86,19 @@ public class CatchingMechanic : MonoBehaviour
                 mash -= Time.deltaTime;
                 timer -= Time.deltaTime;
 
+
                 if (Input.GetKeyDown(KeyCode.Space) && !pressed)
                 {
-                    pressed = true;
-                    slider.value += 0.01f * baseCatchPercentage;
-                    buttonMashTotal += baseCatchPercentage;
-                    mash = mashDelay;
+                    if (baseCatchPercentage != 0)
+                    {
+                        pressed = true;
+                        slider.value += 0.01f * baseCatchPercentage;
+                        buttonMashTotal += baseCatchPercentage;
+                        mash = mashDelay;
+                    }
+
                 }
+
 
                 else if (Input.GetKeyUp(KeyCode.Space))
                 {
@@ -93,14 +107,25 @@ public class CatchingMechanic : MonoBehaviour
 
                 if (mash <= 0)
                 {
-                    slider.value -= 0.01f;
-                    buttonMashTotal--;
-                    mash = mashDelay;
+                    if (baseCatchPercentage != 0)
+                    {
+                        slider.value -= 0.02f;
+                        buttonMashTotal -= 2;
+                        mash = mashDelay;
+                    }
+
+                    else
+                    {
+                        slider.value -= 0.03f;
+                        buttonMashTotal -= 3;
+                        mash = mashDelay;
+                    }
                 }
             }
 
             else
             {
+                countdownDisplay.gameObject.SetActive(false);
                 CalculateCatchChance();
             }
         }
@@ -110,8 +135,15 @@ public class CatchingMechanic : MonoBehaviour
     {
         if (!started)
         {
-            started = true;
-            timer -= Time.deltaTime;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                started = true;
+                mash -= Time.deltaTime;
+                timer -= Time.deltaTime;
+                countdownDisplay.gameObject.SetActive(true);
+                StartCoroutine(CountdownTimer());
+            }
+
         }
 
         if (started)
@@ -119,6 +151,7 @@ public class CatchingMechanic : MonoBehaviour
             if (timer > 0)
             {
                 timer -= Time.deltaTime;
+                isLooping = true;
 
                 if (isLooping && pressAgain)
                 {
@@ -129,6 +162,7 @@ public class CatchingMechanic : MonoBehaviour
 
             else
             {
+                countdownDisplay.gameObject.SetActive(false);
                 CalculateCatchChance();
             }
         }
@@ -136,13 +170,27 @@ public class CatchingMechanic : MonoBehaviour
 
     IEnumerator ContinueButtonPress()
     {
-        pressAgain = false;
+        if (baseCatchPercentage != 0)
+        {
+            pressAgain = false;
 
-        slider.value += 0.01f * baseCatchPercentage;
-        buttonMashTotal += baseCatchPercentage;
+            slider.value += 0.01f * baseCatchPercentage;
+            buttonMashTotal += baseCatchPercentage;
 
-        yield return new WaitForSeconds(timeBetweenPresses);
-        pressAgain = true;
+            yield return new WaitForSeconds(timeBetweenPresses);
+            pressAgain = true;
+        }
+
+        else
+        {
+            pressAgain = false;
+
+            slider.value -= 0.02f;
+            buttonMashTotal -= 2;
+
+            yield return new WaitForSeconds(timeBetweenPresses);
+            pressAgain = true;
+        }
     }
 
 
@@ -155,6 +203,7 @@ public class CatchingMechanic : MonoBehaviour
 
             if (buttonMashTotal >= randomCatchNumber)
             {
+                caughtMonsterText.gameObject.SetActive(true);
                 //successful catch
                 Debug.Log("You caught it! " + "button mash " + buttonMashTotal + " randon catch number " + randomCatchNumber);
                 willSystem.playerCurrentWillPoints += willSystem.catchWillPoints;
@@ -164,6 +213,7 @@ public class CatchingMechanic : MonoBehaviour
 
             else
             {
+                failedCatchText.gameObject.SetActive(true);
                 //Failed catch
                 Debug.Log("Failed to catch! " + " button mash " + buttonMashTotal + " randon catch number " + randomCatchNumber);
                 willSystem.playerCurrentWillPoints -= willSystem.playerFailCatchWillPoints;
@@ -176,5 +226,17 @@ public class CatchingMechanic : MonoBehaviour
         calculatedCatch = true;
     }
 
+    IEnumerator CountdownTimer()
+    {
+        while (countdownTime > 0)
+        {
+            countdownDisplay.text = countdownTime.ToString();
+            yield return new WaitForSeconds(1);
+            // Debug.Log(countdownDisplay.text);
+            countdownTime--;
+        }
+
+    }
     */
+
 }
