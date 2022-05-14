@@ -17,8 +17,8 @@ MonoBehaviour:
   isPlayer: 1
   playerArmor: {fileID: 11400000, guid: 9f4a8c2b32dbd694f8218b60c91e4c59, type: 2}
   playerWeapon: {fileID: 11400000, guid: d4fa77dc99d25764099bfabe7b2ed7c8, type: 2}
-  playerStats: {fileID: 11400000, guid: 1dec361847b00024fae337e5da9aa3c9, type: 2}
   playerSpeed: 13
+  playerCritical: 0
   playerLearnableMoves:
   - level: 1
     playerMoveBase: {fileID: 11400000, guid: 4fe800b968e4f1f43ba3a91c6ba4ef3e, type: 2}
@@ -26,5 +26,36 @@ MonoBehaviour:
     playerMoveBase: {fileID: 11400000, guid: 0f902b0273d2cea43a5cd63674c131c6, type: 2}
   - level: 3
     playerMoveBase: {fileID: 11400000, guid: b434fbb45c5c2514a9527e60157f7e8b, type: 2}
+  playerStats:
+  - level: 1
+    playerMaxHP: 36
+    playerAttack: 8
+    playerDefense: 9
+    playerSpecialAttack: 8
+    playerSpecialDefense: 9
+  - level: 2
+    playerMaxHP: 40
+    playerAttack: 10
+    playerDefense: 11
+    playerSpecialAttack: 10
+    playerSpecialDefense: 11
+  - level: 3
+    playerMaxHP: 44
+    playerAttack: 13
+    playerDefense: 14
+    playerSpecialAttack: 13
+    playerSpecialDefense: 14
+  - level: 4
+    playerMaxHP: 48
+    playerAttack: 15
+    playerDefense: 17
+    playerSpecialAttack: 15
+    playerSpecialDefense: 17
+  - level: 5
+    playerMaxHP: 52
+    playerAttack: 18
+    playerDefense: 20
+    playerSpecialAttack: 18
+    playerSpecialDefense: 20
   expYield: 0
   growthRate: 3

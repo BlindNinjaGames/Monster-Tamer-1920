@@ -14,12 +14,13 @@ public class SO_PlayerBase : ScriptableObject
 
     [SerializeField] SO_ArmorBase playerArmor;
     [SerializeField] SO_WeaponBase playerWeapon;
-    [SerializeField] SO_PlayerStats playerStats;
 
     // Base Stats
     [SerializeField] int playerSpeed;
+    [SerializeField] int playerCritical;
 
     [SerializeField] List<PlayerLearnableMoves> playerLearnableMoves;
+    [SerializeField] List<PlayerStats> playerStats;
 
     [SerializeField] int expYield;
     [SerializeField] GrowthRate growthRate;
@@ -80,15 +81,27 @@ public class SO_PlayerBase : ScriptableObject
 public class PlayerLearnableMoves
 {
     [SerializeField] int level;
-    [SerializeField] SO_PlayerMoveBase playerMoveBase;
+    [SerializeField] SO_MoveBase playerMoveBase;
+}
+
+[System.Serializable]
+public class PlayerStats
+{
+    [SerializeField] int level;
+    [SerializeField] int playerMaxHP;
+    [SerializeField] int playerAttack;
+    [SerializeField] int playerDefense;
+    [SerializeField] int playerSpecialAttack;
+    [SerializeField] int playerSpecialDefense;
 }
 
 
 public enum PlayerStat
 {
-    playerMaxHP,
     playerAttack,
     playerDefense,
+    playerSpecialAttack,
+    playerSpecialDefense,
     playerSpeed,
     playerCritical,
 

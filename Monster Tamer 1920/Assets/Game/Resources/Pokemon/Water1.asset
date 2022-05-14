@@ -23,27 +23,41 @@ MonoBehaviour:
   pokemonCritical: 5
   learnableMoves:
   - level: 1
+    moveBase: {fileID: 11400000, guid: 9010b822727ce404592026d1aca992ea, type: 2}
+  - level: 1
     moveBase: {fileID: 11400000, guid: 4c4a37c60fb66de4d8e79a1b4581fa4b, type: 2}
+  - level: 2
+    moveBase: {fileID: 11400000, guid: 2186d68b323a05d4ea67c85126472fd2, type: 2}
   pokemonStats:
   - pokemonLevel: 1
     pokemonMaxHP: 65
-    pokemonAttack: 21
-    pokemonDefense: 19
+    pokemonAttack: 16
+    pokemonDefense: 14
+    pokemonSpecialAttack: 16
+    pokemonSpecialDefense: 14
   - pokemonLevel: 2
     pokemonMaxHP: 69
-    pokemonAttack: 25
-    pokemonDefense: 19
+    pokemonAttack: 20
+    pokemonDefense: 18
+    pokemonSpecialAttack: 20
+    pokemonSpecialDefense: 18
   - pokemonLevel: 3
     pokemonMaxHP: 73
-    pokemonAttack: 29
-    pokemonDefense: 23
+    pokemonAttack: 24
+    pokemonDefense: 22
+    pokemonSpecialAttack: 24
+    pokemonSpecialDefense: 22
   - pokemonLevel: 4
     pokemonMaxHP: 77
-    pokemonAttack: 33
-    pokemonDefense: 27
+    pokemonAttack: 28
+    pokemonDefense: 26
+    pokemonSpecialAttack: 28
+    pokemonSpecialDefense: 26
   - pokemonLevel: 5
     pokemonMaxHP: 81
-    pokemonAttack: 37
-    pokemonDefense: 31
+    pokemonAttack: 32
+    pokemonDefense: 30
+    pokemonSpecialAttack: 32
+    pokemonSpecialDefense: 30
   expYield: 200
   growthRate: 3

@@ -20,8 +20,8 @@ public class SO_PokemonBase : ScriptableObject
 
 
     // Base Stats
-    [SerializeField]  int pokemonSpeed;
-    [SerializeField]  int pokemonCritical;
+    [SerializeField]  int pokemonSpeed;  //Speed does not change with level up.
+    [SerializeField]  int pokemonCritical;  //Critical does not change with level up. It's applied as added critical chance to all attacks.
 
     [SerializeField]  List<LearnableMoves> learnableMoves;
     [SerializeField]  List<PokemonStats> pokemonStats;
@@ -80,23 +80,6 @@ public class SO_PokemonBase : ScriptableObject
 
     public GrowthRate GrowthRate => growthRate;
 
-    public void GetMonsterRank(int level)
-    {
-        if(level <= 4)
-        {
-           monsterRank = 1;
-        }
-
-        else if(level > 4 && level <= 8)
-        {
-            monsterRank = 2;
-        }
-
-        else
-        {
-            monsterRank = 3;
-        }
-    }
 }
 
 [System.Serializable]
@@ -123,6 +106,8 @@ public class PokemonStats
     [SerializeField]  int pokemonMaxHP;
     [SerializeField]  int pokemonAttack;
     [SerializeField]  int pokemonDefense;
+    [SerializeField] int pokemonSpecialAttack;
+    [SerializeField] int pokemonSpecialDefense;
 }
 
 
@@ -130,6 +115,8 @@ public enum Stat
 {
     pokemonAttack,
     pokemonDefense,
+    pokemonSpecialAttack,
+    pokemonSpecialDefense,
     pokemonSpeed,
     pokemonCritical,
 
@@ -142,4 +129,9 @@ public enum Stat
 public enum GrowthRate
 {
     Fast, MediumFast, MediumSlow, Slow, Fluctuating
+}
+
+public enum DropRarity
+{
+    Common, Uncommon, Rare
 }
