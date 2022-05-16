@@ -17,8 +17,6 @@ MonoBehaviour:
   isPlayer: 1
   playerArmor: {fileID: 11400000, guid: 9f4a8c2b32dbd694f8218b60c91e4c59, type: 2}
   playerWeapon: {fileID: 11400000, guid: d4fa77dc99d25764099bfabe7b2ed7c8, type: 2}
-  playerSpeed: 13
-  playerCritical: 0
   playerLearnableMoves:
   - level: 1
     playerMoveBase: {fileID: 11400000, guid: 4fe800b968e4f1f43ba3a91c6ba4ef3e, type: 2}
@@ -33,29 +31,39 @@ MonoBehaviour:
     playerDefense: 9
     playerSpecialAttack: 8
     playerSpecialDefense: 9
+    playerSpeed: 13
+    playerCritical: 0
   - level: 2
     playerMaxHP: 40
     playerAttack: 10
     playerDefense: 11
     playerSpecialAttack: 10
     playerSpecialDefense: 11
+    playerSpeed: 13
+    playerCritical: 0
   - level: 3
     playerMaxHP: 44
     playerAttack: 13
     playerDefense: 14
     playerSpecialAttack: 13
     playerSpecialDefense: 14
+    playerSpeed: 13
+    playerCritical: 0
   - level: 4
     playerMaxHP: 48
     playerAttack: 15
     playerDefense: 17
     playerSpecialAttack: 15
     playerSpecialDefense: 17
+    playerSpeed: 13
+    playerCritical: 0
   - level: 5
     playerMaxHP: 52
     playerAttack: 18
     playerDefense: 20
     playerSpecialAttack: 18
     playerSpecialDefense: 20
+    playerSpeed: 13
+    playerCritical: 0
   expYield: 0
   growthRate: 3

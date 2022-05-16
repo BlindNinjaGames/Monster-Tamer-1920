@@ -15,10 +15,6 @@ public class SO_PlayerBase : ScriptableObject
     [SerializeField] SO_ArmorBase playerArmor;
     [SerializeField] SO_WeaponBase playerWeapon;
 
-    // Base Stats
-    [SerializeField] int playerSpeed;
-    [SerializeField] int playerCritical;
-
     [SerializeField] List<PlayerLearnableMoves> playerLearnableMoves;
     [SerializeField] List<PlayerStats> playerStats;
 
@@ -93,6 +89,8 @@ public class PlayerStats
     [SerializeField] int playerDefense;
     [SerializeField] int playerSpecialAttack;
     [SerializeField] int playerSpecialDefense;
+    [SerializeField] int playerSpeed;
+    [SerializeField] int playerCritical;
 }
 
 

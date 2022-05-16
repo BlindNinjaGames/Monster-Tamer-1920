@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Beginner Sword
   weaponDescription: Cheap government-issued sword.
-  weaponFrontSprite: {fileID: -1298817131065152279, guid: b808b8b277ff81d4ebc32c0bf5499789, type: 3}
-  weaponBackSprite: {fileID: -3071350886488839432, guid: b808b8b277ff81d4ebc32c0bf5499789, type: 3}
+  weaponFrontSprite: {fileID: -5330209929612280627, guid: de2d2eb0b1dd00d45af5a62d4b68ce85, type: 3}
+  weaponBackSprite: {fileID: -4038341700606420678, guid: de2d2eb0b1dd00d45af5a62d4b68ce85, type: 3}
   weaponType: {fileID: 11400000, guid: 354b42cd0d495a84d99e275170c1a54c, type: 2}
   weaponStats:
   - weaponLevel: 1

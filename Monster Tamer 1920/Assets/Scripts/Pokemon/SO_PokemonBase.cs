@@ -18,11 +18,6 @@ public class SO_PokemonBase : ScriptableObject
     [SerializeField]  int monsterRank;
     [SerializeField]  bool hasNose;
 
-
-    // Base Stats
-    [SerializeField]  int pokemonSpeed;  //Speed does not change with level up.
-    [SerializeField]  int pokemonCritical;  //Critical does not change with level up. It's applied as added critical chance to all attacks.
-
     [SerializeField]  List<LearnableMoves> learnableMoves;
     [SerializeField]  List<PokemonStats> pokemonStats;
 
@@ -108,6 +103,8 @@ public class PokemonStats
     [SerializeField]  int pokemonDefense;
     [SerializeField] int pokemonSpecialAttack;
     [SerializeField] int pokemonSpecialDefense;
+    [SerializeField] int pokemonSpeed;
+    [SerializeField] int pokemonCritical;
 }
 
 

@@ -6,10 +6,12 @@ using TMPro;
 
 public class CatchingMechanic : MonoBehaviour
 {
-    [SerializeField] int baseCatchPercentage;
+    [SerializeField] float baseCatchPercentage;
+    [SerializeField] float lowHPBonus;  //If monster HP is 30% or lower, lowHPBonus is 0.2. Otherwise, it's zero. Must be set in the BattleSystem script.
+    [SerializeField] float conditionBonus;  //If monster has a condition is true, conditionBonus is 0.2. Otherwise, it's zero. Must be set in the BattleSystem script.
     WillSystem willSystem;
-  //  MonsterScript monsterScript;   //Need to use the correct script to identify monsters
-    int buttonMashTotal;
+ //   MonsterScript monsterScript;   //Need to use the correct script to identify monsters
+    float buttonMashTotal;
     int randomCatchNumber;
     [SerializeField] float mashDelay = 0.2f;
     bool pressed = false;
@@ -42,7 +44,9 @@ public class CatchingMechanic : MonoBehaviour
     {
         mash = mashDelay;
         timer = timerValue;
-        baseCatchPercentage = 1 + willSystem.playerRank - monsterScript.monsterRank;   //Need to use the correct script to identify monsters
+
+        //This line of code should probably be calculdated in the BattleSystem script and the result of baseCatchPercentage should just be brought over here to be used.
+        baseCatchPercentage = 1 + willSystem.playerRank - monsterScript.monsterRank + lowHPBonus + conditionBonus;   //Need to use the correct script to identify monsters
 
         caughtMonsterText.gameObject.SetActive(false);
         failedCatchText.gameObject.SetActive(false);
