@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
         willSystem = GetComponent<WillSystem>();
     }
 
-    private void Update()
+    public void HandleUpdate()
     {
         if (!isMoving)
         {

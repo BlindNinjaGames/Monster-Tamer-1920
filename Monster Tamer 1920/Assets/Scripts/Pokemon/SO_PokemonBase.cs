@@ -15,10 +15,10 @@ public class SO_PokemonBase : ScriptableObject
 
     [SerializeField]  SO_TypeBase pokemonType;
 
-    [SerializeField]  int monsterRank;
+    [SerializeField] public int monsterRank;
     [SerializeField]  bool hasNose;
 
-    [SerializeField]  List<LearnableMoves> learnableMoves;
+    [SerializeField]  List<LearnableMove> learnableMoves;
     [SerializeField]  List<PokemonStats> pokemonStats;
 
     [SerializeField] int expYield;
@@ -75,15 +75,60 @@ public class SO_PokemonBase : ScriptableObject
 
     public GrowthRate GrowthRate => growthRate;
 
+    
+
+
+
+    public string PokemonName
+    {
+        get { return pokemonName; }
+    }
+
+    public string PokemonDescription
+    {
+        get { return pokemonDescription; }
+    }
+
+    public Sprite PokemonFrontSprite
+    {
+        get { return pokemonFrontSprite; }
+    }
+
+    public Sprite PokemonBackSprite
+    {
+        get { return pokemonBackSprite; }
+    }
+
+    public SO_TypeBase PokemonType
+    {
+        get { return pokemonType; }
+    }
+
+
+    public bool HasNose
+    {
+        get { return hasNose; }
+    }
+
+    public List<LearnableMove> LearnableMoves
+    {
+        get { return learnableMoves; }
+    }
+
+    public List<PokemonStats> PokemonStats
+    {
+        get { return pokemonStats; }
+    }
+
 }
 
 [System.Serializable]
-public class LearnableMoves
+public class LearnableMove
 {
     [SerializeField]  int level;
     [SerializeField]  SO_MoveBase moveBase;
 
-    public SO_MoveBase MoveBase
+    public SO_MoveBase Base
     {
         get { return moveBase; }
     }
@@ -97,14 +142,54 @@ public class LearnableMoves
 [System.Serializable]
 public class PokemonStats
 {
-    [SerializeField]  int pokemonLevel;
+    [SerializeField]  int level;
     [SerializeField]  int pokemonMaxHP;
     [SerializeField]  int pokemonAttack;
     [SerializeField]  int pokemonDefense;
-    [SerializeField] int pokemonSpecialAttack;
-    [SerializeField] int pokemonSpecialDefense;
+    [SerializeField] int pokemonSpAttack;
+    [SerializeField] int pokemonSpDefense;
     [SerializeField] int pokemonSpeed;
     [SerializeField] int pokemonCritical;
+
+    public int Level
+    {
+        get { return level; }
+    }
+
+    public int PokemonMaxHP
+    {
+        get { return pokemonMaxHP; }
+    }
+
+    public int PokemonAttack
+    {
+        get { return pokemonAttack; }
+    }
+
+    public int PokemonSpAttack
+    {
+        get { return pokemonSpAttack; }
+    }
+
+    public int PokemonDefense
+    {
+        get { return pokemonDefense; }
+    }
+
+    public int PokemonSpDefense
+    {
+        get { return pokemonSpDefense; }
+    }
+
+    public int PokemonSpeed
+    {
+        get { return pokemonSpeed; }
+    }
+
+    public int PokemonCritical
+    {
+        get { return pokemonCritical; }
+    }
 }
 
 

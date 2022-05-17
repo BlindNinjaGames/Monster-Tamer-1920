@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7991111978d21b84687e2fdcf91de34a, type: 3}
   m_Name: Ember
   m_EditorClassIdentifier: 
-  moveName: Ember
-  moveDescription: Weak fire attack
+  name: Ember
+  description: 
   moveType: {fileID: 11400000, guid: 5b269dedbe44cc24f924ebb26deec101, type: 2}
   power: 40
   accuracy: 100

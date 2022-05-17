@@ -19,8 +19,6 @@ MonoBehaviour:
   pokemonType: {fileID: 11400000, guid: 4bae93ed230fb0f478974b138dfa1e01, type: 2}
   monsterRank: 0
   hasNose: 0
-  pokemonSpeed: 9
-  pokemonCritical: 3
   learnableMoves:
   - level: 1
     moveBase: {fileID: 11400000, guid: 9010b822727ce404592026d1aca992ea, type: 2}
@@ -29,35 +27,45 @@ MonoBehaviour:
   - level: 2
     moveBase: {fileID: 11400000, guid: 99620b6a12617a34b83897c5169884c4, type: 2}
   pokemonStats:
-  - pokemonLevel: 1
+  - level: 1
     pokemonMaxHP: 72
     pokemonAttack: 17
     pokemonDefense: 19
-    pokemonSpecialAttack: 13
-    pokemonSpecialDefense: 14
-  - pokemonLevel: 2
+    pokemonSpAttack: 0
+    pokemonSpDefense: 0
+    pokemonSpeed: 0
+    pokemonCritical: 0
+  - level: 2
     pokemonMaxHP: 76
     pokemonAttack: 21
     pokemonDefense: 23
-    pokemonSpecialAttack: 17
-    pokemonSpecialDefense: 18
-  - pokemonLevel: 3
+    pokemonSpAttack: 0
+    pokemonSpDefense: 0
+    pokemonSpeed: 0
+    pokemonCritical: 0
+  - level: 3
     pokemonMaxHP: 81
     pokemonAttack: 25
     pokemonDefense: 27
-    pokemonSpecialAttack: 21
-    pokemonSpecialDefense: 22
-  - pokemonLevel: 4
+    pokemonSpAttack: 0
+    pokemonSpDefense: 0
+    pokemonSpeed: 0
+    pokemonCritical: 0
+  - level: 4
     pokemonMaxHP: 85
     pokemonAttack: 29
     pokemonDefense: 31
-    pokemonSpecialAttack: 25
-    pokemonSpecialDefense: 26
-  - pokemonLevel: 5
+    pokemonSpAttack: 0
+    pokemonSpDefense: 0
+    pokemonSpeed: 0
+    pokemonCritical: 0
+  - level: 5
     pokemonMaxHP: 89
     pokemonAttack: 33
     pokemonDefense: 35
-    pokemonSpecialAttack: 29
-    pokemonSpecialDefense: 30
+    pokemonSpAttack: 0
+    pokemonSpDefense: 0
+    pokemonSpeed: 0
+    pokemonCritical: 0
   expYield: 200
   growthRate: 3

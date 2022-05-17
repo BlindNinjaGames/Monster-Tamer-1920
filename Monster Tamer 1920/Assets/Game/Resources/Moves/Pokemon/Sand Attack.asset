@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7991111978d21b84687e2fdcf91de34a, type: 3}
   m_Name: Sand Attack
   m_EditorClassIdentifier: 
-  moveName: Sand Attack
-  moveDescription: Earth move
+  name: Sand Attack
+  description: 
   moveType: {fileID: 11400000, guid: 4bae93ed230fb0f478974b138dfa1e01, type: 2}
   power: 20
   accuracy: 80

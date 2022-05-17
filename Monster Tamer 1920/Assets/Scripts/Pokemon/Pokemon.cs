@@ -4,216 +4,220 @@ using UnityEngine;
 
 public class Pokemon : MonoBehaviour
 {
-    [SerializeField] SO_PokemonBase _base;
-    [SerializeField] int level;
+    [SerializeField] SO_PokemonBase Base { get; set; }
+    [SerializeField] int Level { get; set; }
 
-    public Pokemon(SO_PokemonBase pBase, int pLevel)
+    public int HP { get; set; }
+
+    public List<Move> Moves { get; set; }
+
+
+
+
+    public Pokemon(SO_PokemonBase poBase, int poLevel)
     {
-        _base = pBase;
-        level = pLevel;
+        Base = poBase;
+        Level = poLevel;
+
+
+
+    Moves = new List<Move>();
+
+        foreach (var move in Base.LearnableMoves)
+        {
+            if (move.Level <= Level)
+                Moves.Add(new Move(move.Base));
+
+            if (Moves.Count >= SO_PokemonBase.MaxNumOfMoves)
+                break;
+        }
     }
 
-    public SO_PokemonBase Base
+    
+    public int GetMonsterRank()
     {
-        get
+        if (Level <= 4)
         {
-            return _base;
-        }
-    }
-    public int Level
-    {
-        get
-        {
-            return level;
-        }
-    }
-
-
-    /*
-    public int GetMonsterRank(int level)
-    {
-        if (level <= 4)
-        {
-           return monsterRank = 1;  //Rank EE
+           return Base.monsterRank = 1;  //Rank EE
         }
 
-        else if (level >= 5 && level <= 8)
+        else if (Level >= 5 && Level <= 8)
         {
-           return monsterRank = 2; //Rank ED
+           return Base.monsterRank = 2; //Rank ED
         }
 
-        else if (level >= 9 && level <=12)
+        else if (Level >= 9 && Level <=12)
         {
-           return monsterRank = 3;  //Rank EC
+           return Base.monsterRank = 3;  //Rank EC
         }
 
-        else if (level >= 13 && level <= 16)
+        else if (Level >= 13 && Level <= 16)
         {
-           return monsterRank = 4;  //Rank EB
+           return Base.monsterRank = 4;  //Rank EB
         }
 
-        else if (level >= 17 && level <= 20)
+        else if (Level >= 17 && Level <= 20)
         {
-           return monsterRank = 5;  //Rank EA
+           return Base.monsterRank = 5;  //Rank EA
         }
 
-        else if (level >= 21 && level <= 24)
+        else if (Level >= 21 && Level <= 24)
         {
-           return monsterRank = 6;  //Rank ES
+           return Base.monsterRank = 6;  //Rank ES
         }
 
-        else if (level >= 25 && level <= 28)
+        else if (Level >= 25 && Level <= 28)
         {
-           return monsterRank = 7;  //Rank DE
+           return Base.monsterRank = 7;  //Rank DE
         }
 
-        else if (level >= 29 && level <= 32)
+        else if (Level >= 29 && Level <= 32)
         {
-           return monsterRank = 8;  //Rank DD
+           return Base.monsterRank = 8;  //Rank DD
         }
 
-        else if (level >= 33 && level <= 36)
+        else if (Level >= 33 && Level <= 36)
         {
-          return monsterRank = 9;  //Rank DC
+          return Base.monsterRank = 9;  //Rank DC
         }
 
-        else if (level >= 37 && level <= 40)
+        else if (Level >= 37 && Level <= 40)
         {
-           return monsterRank = 10;  //Rank DB
+           return Base.monsterRank = 10;  //Rank DB
         }
 
-        else if (level >= 41 && level <= 44)
+        else if (Level >= 41 && Level <= 44)
         {
-           return monsterRank =11;  //Rank DA
+           return Base.monsterRank =11;  //Rank DA
         }
 
-        else if (level >= 45 && level <= 48)
+        else if (Level >= 45 && Level <= 48)
         {
-           return monsterRank = 12;  //Rank DS
+           return Base.monsterRank = 12;  //Rank DS
         }
 
-        else if (level >= 49 && level <= 52)
+        else if (Level >= 49 && Level <= 52)
         {
-           return monsterRank = 13;  //Rank CE
+           return Base.monsterRank = 13;  //Rank CE
         }
 
-        else if (level >= 53 && level <= 56)
+        else if (Level >= 53 && Level <= 56)
         {
-           return monsterRank = 14;  //Rank CD
+           return Base.monsterRank = 14;  //Rank CD
         }
 
-        else if (level >= 57 && level <= 60)
+        else if (Level >= 57 && Level <= 60)
         {
-           return monsterRank = 15;  //Rank CC
+           return Base.monsterRank = 15;  //Rank CC
         }
 
-        else if (level >= 61 && level <= 64)
+        else if (Level >= 61 && Level <= 64)
         {
-           return monsterRank = 16;  //Rank CB
+           return Base.monsterRank = 16;  //Rank CB
         }
 
-        else if (level >= 65 && level <= 68)
+        else if (Level >= 65 && Level <= 68)
         {
-           return monsterRank = 17;  //Rank CA
+           return Base.monsterRank = 17;  //Rank CA
         }
 
-        else if (level >= 69 && level <= 72)
+        else if (Level >= 69 && Level <= 72)
         {
-           return monsterRank = 18;  //Rank CS
+           return Base.monsterRank = 18;  //Rank CS
         }
 
-        else if (level >= 73 && level <= 76)
+        else if (Level >= 73 && Level <= 76)
         {
-           return monsterRank = 19;  //Rank BE
+           return Base.monsterRank = 19;  //Rank BE
         }
 
-        else if (level >= 77 && level <= 80)
+        else if (Level >= 77 && Level <= 80)
         {
-           return monsterRank = 20;  //Rank BD
+           return Base.monsterRank = 20;  //Rank BD
         }
 
-        else if (level >= 81 && level <= 84)
+        else if (Level >= 81 && Level <= 84)
         {
-           return monsterRank = 21;  //Rank BC
+           return Base.monsterRank = 21;  //Rank BC
         }
 
-        else if (level >= 85 && level <= 88)
+        else if (Level >= 85 && Level <= 88)
         {
-           return monsterRank = 22;  //Rank BB
+           return Base.monsterRank = 22;  //Rank BB
         }
 
-        else if (level >= 89 && level <= 92)
+        else if (Level >= 89 && Level <= 92)
         {
-           return monsterRank = 23;  //Rank BA
+           return Base.monsterRank = 23;  //Rank BA
         }
 
-        else if (level >= 93 && level <= 96)
+        else if (Level >= 93 && Level <= 96)
         {
-           return monsterRank = 24;  //Rank BS
+           return Base.monsterRank = 24;  //Rank BS
         }
 
-        else if (level >= 97 && level <= 100)
+        else if (Level >= 97 && Level <= 100)
         {
-           return monsterRank = 25;  //Rank AE
+           return Base.monsterRank = 25;  //Rank AE
         }
 
-        else if (level >= 101 && level <= 104)
+        else if (Level >= 101 && Level <= 104)
         {
-           return monsterRank = 26;  //Rank AD
+           return Base.monsterRank = 26;  //Rank AD
         }
 
-        else if (level >= 105 && level <= 108)
+        else if (Level >= 105 && Level <= 108)
         {
-           return monsterRank = 27;  //Rank AC
+           return Base.monsterRank = 27;  //Rank AC
         }
 
-        else if (level >= 109 && level <= 112)
+        else if (Level >= 109 && Level <= 112)
         {
-           return monsterRank = 28;  //Rank AB
+           return Base.monsterRank = 28;  //Rank AB
         }
 
-        else if (level >= 113 && level <= 116)
+        else if (Level >= 113 && Level <= 116)
         {
-           return monsterRank = 29;  //Rank AA
+           return Base.monsterRank = 29;  //Rank AA
         }
 
-        else if (level >= 117 && level <= 120)
+        else if (Level >= 117 && Level <= 120)
         {
-           return monsterRank = 30;  //Rank AS
+           return Base.monsterRank = 30;  //Rank AS
         }
 
-        else if (level >= 121 && level <= 124)
+        else if (Level >= 121 && Level <= 124)
         {
-           return monsterRank = 31;  //Rank SE
+           return Base.monsterRank = 31;  //Rank SE
         }
 
-        else if (level >= 125 && level <= 128)
+        else if (Level >= 125 && Level <= 128)
         {
-           return monsterRank = 32;  //Rank SD
+           return Base.monsterRank = 32;  //Rank SD
         }
 
-        else if (level >= 129 && level <= 132)
+        else if (Level >= 129 && Level <= 132)
         {
-           return monsterRank = 33;  //Rank SC
+           return Base.monsterRank = 33;  //Rank SC
         }
 
-        else if (level >= 133 && level <= 136)
+        else if (Level >= 133 && Level <= 136)
         {
-           return monsterRank = 34;  //Rank SB
+           return Base.monsterRank = 34;  //Rank SB
         }
 
-        else if (level >= 137 && level <= 149)
+        else if (Level >= 137 && Level <= 149)
         {
-           return monsterRank = 35;  //Rank SA
+           return Base.monsterRank = 35;  //Rank SA
         }
 
         else
         {
-           return monsterRank = 36;  //Rank SS
+           return Base.monsterRank = 36;  //Rank SS
         }
     }
 
-    */
+    
 
     
 

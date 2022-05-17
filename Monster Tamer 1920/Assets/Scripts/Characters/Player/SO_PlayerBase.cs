@@ -78,6 +78,16 @@ public class PlayerLearnableMoves
 {
     [SerializeField] int level;
     [SerializeField] SO_MoveBase playerMoveBase;
+
+    public SO_MoveBase PlayerMoveBase
+    {
+        get { return playerMoveBase; }
+    }
+
+    public int Level
+    {
+        get { return level; }
+    }
 }
 
 [System.Serializable]
