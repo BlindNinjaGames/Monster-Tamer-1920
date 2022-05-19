@@ -9,8 +9,27 @@ public class GameController : MonoBehaviour
     [SerializeField] PlayerController playerController;
 
     GameState state;
+    GameState prevState;
 
-    private void Update()
+    private void Start()
+    {
+
+        DialogManager.Instance.OnShowDialog += () =>
+        {
+            prevState = state;
+            state = GameState.Dialog;
+        };
+
+        DialogManager.Instance.OnDialogFinished += () =>
+        {
+            if (state == GameState.Dialog)
+                state = prevState;
+        };
+
+    }
+
+
+        private void Update()
     {
         if(state == GameState.FreeRoam)
         {

@@ -1967,6 +1967,9 @@ GameObject:
   - component: {fileID: 1142497368}
   - component: {fileID: 1142497367}
   - component: {fileID: 1142497366}
+  - component: {fileID: 1142497372}
+  - component: {fileID: 1142497371}
+  - component: {fileID: 1142497370}
   m_Layer: 8
   m_Name: NPCTest
   m_TagString: Untagged
@@ -2087,6 +2090,69 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1142497370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142497365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f48124ed6539394293352a95ee514bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkDownSprites:
+  - {fileID: -8922328891513336043, guid: 13d966f2ea1350a48aca6c6983f3f837, type: 3}
+  - {fileID: 5527661196443274707, guid: 13d966f2ea1350a48aca6c6983f3f837, type: 3}
+  - {fileID: -2495014906627460004, guid: 13d966f2ea1350a48aca6c6983f3f837, type: 3}
+  - {fileID: 5610367206947713552, guid: 13d966f2ea1350a48aca6c6983f3f837, type: 3}
+  walkUpSprites:
+  - {fileID: 307091595780809877, guid: 13d966f2ea1350a48aca6c6983f3f837, type: 3}
+  - {fileID: -2126968859773451732, guid: 13d966f2ea1350a48aca6c6983f3f837, type: 3}
+  - {fileID: -5535047699543943917, guid: 13d966f2ea1350a48aca6c6983f3f837, type: 3}
+  - {fileID: -4526993761146232485, guid: 13d966f2ea1350a48aca6c6983f3f837, type: 3}
+  walkRightSprites:
+  - {fileID: 2230936588577103941, guid: 13d966f2ea1350a48aca6c6983f3f837, type: 3}
+  - {fileID: -9111473675286820144, guid: 13d966f2ea1350a48aca6c6983f3f837, type: 3}
+  - {fileID: -5627484699997550656, guid: 13d966f2ea1350a48aca6c6983f3f837, type: 3}
+  - {fileID: -5051899674784280284, guid: 13d966f2ea1350a48aca6c6983f3f837, type: 3}
+  walkLeftSprites:
+  - {fileID: 4614894318121576524, guid: 13d966f2ea1350a48aca6c6983f3f837, type: 3}
+  - {fileID: 7369579285134121275, guid: 13d966f2ea1350a48aca6c6983f3f837, type: 3}
+  - {fileID: -1211714280344312584, guid: 13d966f2ea1350a48aca6c6983f3f837, type: 3}
+  - {fileID: 6842672397523141539, guid: 13d966f2ea1350a48aca6c6983f3f837, type: 3}
+  defaultDirection: 1
+--- !u!114 &1142497371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142497365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a71dbc515e20841b346f9d449a53dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!114 &1142497372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142497365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7f72c69f3fc4f40a269b98850d4c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    lines:
+    - Congratulations on passing your certification!
+    - You do all of us a great honor by risking your life to protect humanity from
+      the monster infestation.
 --- !u!1 &1186927418
 GameObject:
   m_ObjectHideFlags: 0
