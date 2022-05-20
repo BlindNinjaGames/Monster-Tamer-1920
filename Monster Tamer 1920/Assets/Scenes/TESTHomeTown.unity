@@ -2153,10 +2153,6 @@ MonoBehaviour:
     - Congratulations on passing your certification!
     - You do all of us a great honor by risking your life to protect humanity from
       the monster infestation.
-  movementPattern:
-  - {x: 4, y: 0}
-  - {x: -4, y: 0}
-  timeBetweenPattern: 3
 --- !u!1 &1186927418
 GameObject:
   m_ObjectHideFlags: 0

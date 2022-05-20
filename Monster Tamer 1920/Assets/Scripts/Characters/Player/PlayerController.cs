@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
         var collider = Physics2D.OverlapCircle(interactPos, 0.3f, GameLayers.i.InteractableLayer);
         if (collider != null)
         {
-            yield return collider.GetComponent<Interactable>()?.Interact(transform);  //the ? is a null condition operator. This prevents the script from crashing if it returns null.
+            yield return collider.GetComponent<Interactable>()?.Interact(transform);
         }
     }
 

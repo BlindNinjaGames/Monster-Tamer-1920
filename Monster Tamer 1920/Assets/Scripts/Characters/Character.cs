@@ -63,9 +63,7 @@ public class Character : MonoBehaviour
         var dir = diff.normalized;
 
         if (Physics2D.BoxCast(transform.position + dir, new Vector2(0.2f, 0.2f), 0f, dir, diff.magnitude - 1, GameLayers.i.SolidLayer | GameLayers.i.InteractableLayer | GameLayers.i.PlayerLayer) == true)
-        {
             return false;
-        }
 
         return true;
     }
