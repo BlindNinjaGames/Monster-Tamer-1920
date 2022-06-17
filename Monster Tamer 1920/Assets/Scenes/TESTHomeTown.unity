@@ -1847,6 +1847,7 @@ GameObject:
   - component: {fileID: 787259267}
   - component: {fileID: 787259269}
   - component: {fileID: 787259268}
+  - component: {fileID: 787259270}
   m_Layer: 0
   m_Name: Decorations 2
   m_TagString: Untagged
@@ -1955,6 +1956,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &787259270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787259266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46db6e7d844765049b37b6542e14cdce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1142497365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,6 +1983,7 @@ GameObject:
   - component: {fileID: 1142497372}
   - component: {fileID: 1142497371}
   - component: {fileID: 1142497370}
+  - component: {fileID: 1142497373}
   m_Layer: 8
   m_Name: NPCTest
   m_TagString: Untagged
@@ -2157,6 +2171,18 @@ MonoBehaviour:
   - {x: 4, y: 0}
   - {x: -4, y: 0}
   timeBetweenPattern: 3
+--- !u!114 &1142497373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142497365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46db6e7d844765049b37b6542e14cdce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1186927418
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,6 +2194,7 @@ GameObject:
   - component: {fileID: 1186927419}
   - component: {fileID: 1186927421}
   - component: {fileID: 1186927420}
+  - component: {fileID: 1186927422}
   m_Layer: 0
   m_Name: Decorations 1
   m_TagString: Untagged
@@ -2276,6 +2303,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1186927422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186927418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46db6e7d844765049b37b6542e14cdce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1192148706
 GameObject:
   m_ObjectHideFlags: 0
@@ -2290,6 +2329,7 @@ GameObject:
   - component: {fileID: 1192148712}
   - component: {fileID: 1192148711}
   - component: {fileID: 1192148710}
+  - component: {fileID: 1192148713}
   m_Layer: 7
   m_Name: TallGrass
   m_TagString: Untagged
@@ -2907,6 +2947,18 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!114 &1192148713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192148706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46db6e7d844765049b37b6542e14cdce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1434921499
 GameObject:
   m_ObjectHideFlags: 0
@@ -2918,6 +2970,7 @@ GameObject:
   - component: {fileID: 1434921500}
   - component: {fileID: 1434921502}
   - component: {fileID: 1434921501}
+  - component: {fileID: 1434921503}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -8850,6 +8903,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1434921503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434921499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46db6e7d844765049b37b6542e14cdce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1546647827
 GameObject:
   m_ObjectHideFlags: 0
@@ -8861,6 +8926,7 @@ GameObject:
   - component: {fileID: 1546647828}
   - component: {fileID: 1546647830}
   - component: {fileID: 1546647829}
+  - component: {fileID: 1546647831}
   m_Layer: 0
   m_Name: Foreground
   m_TagString: Untagged
@@ -10481,6 +10547,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1546647831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546647827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46db6e7d844765049b37b6542e14cdce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2018188752
 GameObject:
   m_ObjectHideFlags: 0
@@ -10492,6 +10570,7 @@ GameObject:
   - component: {fileID: 2018188753}
   - component: {fileID: 2018188755}
   - component: {fileID: 2018188754}
+  - component: {fileID: 2018188756}
   m_Layer: 0
   m_Name: Decorations 3
   m_TagString: Untagged
@@ -10600,3 +10679,15 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &2018188756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018188752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46db6e7d844765049b37b6542e14cdce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
